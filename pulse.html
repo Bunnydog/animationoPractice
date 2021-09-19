@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ch">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>脉冲练习</title>
+    <link rel="stylesheet" href="./icon/iconfont.css">
+
+    <style>
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: aqua;
+            margin: 100px auto;
+            border-radius: 50%;
+            line-height: 100px;
+            text-align: center;
+            position: relative;
+
+        }
+
+        .box i{
+            font-size: 70px;
+        }
+
+        .box:hover{
+            color: azure;
+        }
+
+        .box:hover::after{
+            animation: circle 1s linear infinite;
+        }
+
+        .box::after{
+            content: "";
+            height: 100px;
+            width: 100px;
+            border: 10px solid rgba(0, 255, 255, 0) ;
+            border-radius: 50%;
+            position: absolute;
+            top: -10px;
+            left: -10px;
+
+            
+        }
+
+        @keyframes circle {
+            from{
+                transform: scale(1);
+                border-color: rgba(0, 255, 255, 0.5);
+            }
+            to{
+                transform: scale(2);
+                border-color: rgba(0, 255, 255, 0.0);
+            }
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <div class="box">
+        <i class="iconfont icon-dianzan"></i>
+    </div>
+    
+</body>
+</html>
